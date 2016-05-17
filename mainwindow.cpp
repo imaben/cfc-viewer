@@ -7,7 +7,7 @@
 #include <QMessageBox>
 #include "mainwindow.moc"
 
-#define MAX_LIST_COUNT 200
+#define MAX_LIST_COUNT 2000
 
 MyMainWindow::MyMainWindow(QApplication *app)
 {
@@ -152,7 +152,7 @@ void MyMainWindow::onFetch()
     freeReplyObject(reply);
     redisFree(redis);
     fillListView();
-    statusBar->showMessage("Done.");
+    statusBar->showMessage(QString("Done. total:%1").arg(funcList.count()));
 }
 
 void MyMainWindow::onSearchChanged(const QString &keyword)
@@ -160,7 +160,7 @@ void MyMainWindow::onSearchChanged(const QString &keyword)
     fillListView(keyword);
 }
 
-void MyMainWindow::fillListView(QString keyword)
+int MyMainWindow::fillListView(QString keyword)
 {
     while (listWidget->count()) listWidget->takeItem(0);
 
@@ -172,6 +172,7 @@ void MyMainWindow::fillListView(QString keyword)
             }
             listWidget->addItem(funcList.at(i));
         }
+        return i;
     } else {
         for (i = 0, j = 0; i < funcList.size(); i++) {
             if (j >= MAX_LIST_COUNT) {
@@ -182,5 +183,6 @@ void MyMainWindow::fillListView(QString keyword)
                 j++;
             }
         }
+        return j;
     }
 }

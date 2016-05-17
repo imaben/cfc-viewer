@@ -63,7 +63,7 @@ protected:
 
     void registerSignal();
 
-    void fillListView(QString keyword = NULL);
+    int fillListView(QString keyword = NULL);
 
 private slots:
     void onFetch();

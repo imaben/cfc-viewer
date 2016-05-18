@@ -1,9 +1,4 @@
 #include "mainwindow.h"
-#include <QDir>
-#include <QFile>
-#include <QTextStream>
-#include <QMenuBar>
-#include <QUrl>
 #include <QMessageBox>
 #include "mainwindow.moc"
 

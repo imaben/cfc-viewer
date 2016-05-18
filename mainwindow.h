@@ -4,17 +4,13 @@
 #include <QMainWindow>
 #include <QString>
 #include <QLineEdit>
-#include <QSplitter>
-#include <QMenu>
 #include <QApplication>
 #include <QStatusBar>
 #include <QLabel>
 #include <QGroupBox>
 #include <QPushButton>
-#include <QComboBox>
 #include <QListWidget>
-#include <QStringListModel>
-#include <hiredis/hiredis.h>
+#include <hiredis.h>
 
 class MyMainWindow : public QMainWindow
 {

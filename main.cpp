@@ -6,6 +6,7 @@ int main(int argc, char *argv[]) {
 
     MyMainWindow *mainWindow = new MyMainWindow(&app);
     mainWindow->setWindowTitle("CFC Viewer");
+    mainWindow->setFixedSize(780, 700);
 
     mainWindow->show();
     return app.exec();

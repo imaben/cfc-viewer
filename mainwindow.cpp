@@ -24,7 +24,7 @@ void MyMainWindow::drawGroupBox()
     grpBox->show();
 
     grpBox2 = new QGroupBox(this);
-    grpBox2->setGeometry(QRect(10, 160, 760, 800));
+    grpBox2->setGeometry(QRect(10, 160, 760, 515));
     grpBox2->show();
 }
 
@@ -84,7 +84,7 @@ void MyMainWindow::drawPushButton()
 void MyMainWindow::drawListWidget()
 {
     listWidget = new QListWidget(grpBox2);
-    listWidget->setGeometry(QRect(20, 50, 715, 730));
+    listWidget->setGeometry(QRect(20, 50, 715, 450));
     listWidget->show();
 }
 
